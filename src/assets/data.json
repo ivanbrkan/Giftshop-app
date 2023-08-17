@@ -1,0 +1,246 @@
+{
+  "products": [
+    {
+      "id": "best-buy-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/best.jpg",
+      "name": "Best Buy®",
+      "categories": [
+        "ecommerce",
+        "retail",
+        "electronics"
+      ],
+      "range": {
+        "min": 5
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "lululemon-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/lululemon.jpg",
+      "name": "lululemon",
+      "categories": [
+        "retail",
+        "ecommerce",
+        "apparel"
+      ],
+      "range": {
+        "min": 5,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "chewy-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/chewy-usa.jpg",
+      "name": "Chewy",
+      "categories": [
+        "ecommerce",
+        "pets"
+      ],
+      "range": {
+        "min": 5,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "restaurant_com-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/restaurant_com-usa.jpg",
+      "name": "Restaurant.com",
+      "categories": [
+        "restaurants",
+        "food"
+      ],
+      "range": {
+        "min": 10,
+        "max": 100
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "the-home-depot-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/homedepot-2023-logo.jpg",
+      "name": "The Home Depot",
+      "categories": [
+        "retail",
+        "ecommerce",
+        "home"
+      ],
+      "range": {
+        "min": 3,
+        "max": 2000
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "doordash-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/doordash.jpg",
+      "name": "DoorDash",
+      "categories": [
+        "food",
+        "restaurants"
+      ],
+      "range": {
+        "min": 15,
+        "max": 200
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "airbnb-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/airbnb_2022_latest.jpg",
+      "name": "Airbnb",
+      "categories": [
+        "travel"
+      ],
+      "range": {
+        "min": 25,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "hotels_com-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/hotels-new-logo.jpg",
+      "name": "Hotels.com USD",
+      "categories": [
+        "travel"
+      ],
+      "range": {
+        "min": 10,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "uber-eats-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/uber-eats-new.jpg",
+      "name": "Uber Eats",
+      "categories": [
+        "food",
+        "restaurants"
+      ],
+      "range": {
+        "min": 15,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "delta-air-lines-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/delta.jpg",
+      "name": "Delta Airlines",
+      "categories": [
+        "travel"
+      ],
+      "range": {
+        "min": 50,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "instacart-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/instacart-logos1.jpg",
+      "name": "Instacart",
+      "categories": [
+        "ecommerce",
+        "groceries",
+        "food"
+      ],
+      "range": {
+        "min": 25,
+        "max": 250
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "lowe_s-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/lowes.jpg",
+      "name": "Lowe's",
+      "categories": [
+        "retail",
+        "ecommerce",
+        "home"
+      ],
+      "range": {
+        "min": 5,
+        "max": 2000
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "gap-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/gap-new.jpg",
+      "name": "Gap",
+      "categories": [
+        "retail",
+        "apparel",
+        "health-beauty"
+      ],
+      "range": {
+        "min": 10,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "macys-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/macys.jpg",
+      "name": "Macy's",
+      "categories": [
+        "retail",
+        "apparel",
+        "health-beauty",
+        "home"
+      ],
+      "range": {
+        "min": 5,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "whole-foods-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/whole-foods.jpg",
+      "name": "Whole Foods",
+      "categories": [
+        "food",
+        "groceries"
+      ],
+      "range": {
+        "min": 5,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "nordstrom-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/nordstrom.jpg",
+      "name": "Nordstrom",
+      "categories": [
+        "retail",
+        "apparel",
+        "health-beauty"
+      ],
+      "range": {
+        "min": 5,
+        "max": 500
+      },
+      "currency": "USD"
+    },
+    {
+      "id": "bloomingdales-usa",
+      "image": "https://www.bitrefill.com/content/cn/v1661860260/bloomingdales.jpg",
+      "name": "Bloomingdale's",
+      "categories": [
+        "ecommerce"
+      ],
+      "range": {
+        "min": 25,
+        "max": 250
+      },
+      "currency": "USD"
+    }
+  ]
+}
