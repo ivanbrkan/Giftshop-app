@@ -78,7 +78,6 @@ const OrderHistory = () => {
             <h1 className="font-semibold"> Order History</h1>
             {orders.length === 0 ? (
                 <div className="text-center p-8">
-                    <h2 className="text-2xl font-semibold mb-4">Welcome to our Gift Card Store!</h2>
 
 
 
