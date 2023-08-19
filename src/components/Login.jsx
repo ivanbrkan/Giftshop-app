@@ -82,7 +82,6 @@ export function Login({ setAuth }) {
                             <p className="text-center mt-3">or:</p>
                         </div>
 
-                        {/* Email Login Form */}
                         <form onSubmit={handleEmailLogin}>
                             <MDBInput wrapperClass='mb-4' label='Email address' id='email' htmlFor='email' type='email' />
                             <MDBInput wrapperClass='mb-4' label='Password' id='password' htmlFor='password' type='password' />
@@ -101,7 +100,6 @@ export function Login({ setAuth }) {
                             <p className="text-center mt-3">or:</p>
                         </div>
 
-                        {/* Email Registration Form */}
                         <form onSubmit={handleEmailRegister}>
                             <MDBInput wrapperClass='mb-4' label='Username' id='regUsername' type='text' />
                             <MDBInput wrapperClass='mb-4' label='Email address' id='regEmail' htmlFor='email' type='email' />
