@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { collection, deleteDoc, doc, getDocs, query, where } from "firebase/firestore";
+import { collection, deleteDoc, updateDoc, doc, getDocs, query, where } from "firebase/firestore";
 import { database, auth } from "./firebase-config";
 import productsData from "../assets/data.json";
 import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
 import { Link } from "react-router-dom";
 
-const OrderHistory = () => {
+export const OrderHistory = ({ isAuth, userEmail }) => {
+    const isAdmin = userEmail === 'admin@giftshop.com';
+
     const [orders, setOrders] = useState([]);
     const products = productsData.products;
     const [authInitialized, setAuthInitialized] = useState(false);
@@ -73,28 +75,63 @@ const OrderHistory = () => {
         }
     };
 
+    const handleApproveOrder = async (orderId) => {
+        try {
+            const orderDocRef = doc(database, "orders", orderId);
+            await updateDoc(orderDocRef, {
+                approved: true,
+            });
+
+            // Update the local state to reflect the change
+            setOrders((prevOrders) =>
+                prevOrders.map((order) =>
+                    order.id === orderId ? { ...order, approved: true } : order
+                )
+            );
+        } catch (error) {
+            console.error("Error approving order:", error);
+        }
+    };
+
+    const handleRejectOrder = async (orderId) => {
+        try {
+            const orderDocRef = doc(database, "orders", orderId);
+            await updateDoc(orderDocRef, {
+                approved: false,
+            });
+
+            // Update the local state to reflect the change
+            setOrders((prevOrders) =>
+                prevOrders.map((order) =>
+                    order.id === orderId ? { ...order, approved: false } : order
+                )
+            );
+        } catch (error) {
+            console.error("Error rejecting order:", error);
+        }
+    };
+
     return (
         <div className="mt-3 p-3">
-            <h1 className="font-semibold"> Order History</h1>
+            <h1 className="font-semibold">Order History</h1>
             {orders.length === 0 ? (
                 <div className="text-center p-8">
-
-
-
                     <p className="mt-4">
                         You have no orders. Go to the shop and start ordering!
-
                     </p>
                     <div className="mt-6">
                         <Link to="/shop" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
                             Get Started
                         </Link>
-                    </div></div>
+                    </div>
+                </div>
             ) : (
                 orders.map((order) => (
-                    <div key={order.id} className="order-item">
-                        <h2>Order ID: {order.id}</h2>
-                        <p>Shipping Address: {order.shippingAddress}</p>
+                    <div key={order.id} className={`order-item ${order.approved ? 'approved' : 'not-approved'}`}>
+                        <div className="order-item-header">
+                            <h2>Order ID: {order.id}</h2>
+                            <p>Shipping Address: {order.shippingAddress}</p>
+                        </div>
                         <h3>Items:</h3>
                         <ul className="order-items-list">
                             {order.cartItems.map((cartItem, index) => {
@@ -120,6 +157,24 @@ const OrderHistory = () => {
                                 );
                             })}
                         </ul>
+                        <div className="order-actions">
+                            {isAdmin && (
+                                <>
+                                    <button
+                                        onClick={() => handleApproveOrder(order.id)}
+                                        className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300 mr-2"
+                                    >
+                                        Approve
+                                    </button>
+                                    <button
+                                        onClick={() => handleRejectOrder(order.id)}
+                                        className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition duration-300"
+                                    >
+                                        Reject
+                                    </button>
+                                </>
+                            )}
+                        </div>
                         <p className="order-total-price">Total: ${calculateTotalPrice(order.cartItems).toFixed(2)}</p>
                         <button onClick={() => handleDeleteOrder(order.id)} className="noselect">
                             <span className="text">Cancel</span>

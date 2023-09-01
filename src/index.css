@@ -189,3 +189,13 @@ body {
 .noselect:active .icon svg {
   transform: scale(0.8);
 }
+
+
+
+.order-item.approved {
+  background-color: rgba(9, 218, 9, 0.486);
+}
+
+.order-item.not-approved {
+  background-color: rgba(255, 0, 0, 0.229);
+}

@@ -20,7 +20,6 @@ const Profile = () => {
                 const q = query(ordersCollectionRef, where('userId', '==', user.uid));
                 const unsubscribeOrders = onSnapshot(q, (snapshot) => {
                     setNumberOfOrders(snapshot.size); // Update number of orders in real-time
-                    console.log('krug')
                 });
                 return () => {
                     unsubscribeOrders();
@@ -59,7 +58,7 @@ const Profile = () => {
             ) : (
                 <p className="text-center">Loading...</p>
             )}
-            <OrderHistory />
+            <OrderHistory isAuth={Boolean(user)} userEmail={user ? user.email : ''} />
         </div>
     );
 };

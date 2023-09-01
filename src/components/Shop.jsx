@@ -13,7 +13,7 @@ export const Shop = ({ toggleCart, cartItems, setCartItems }) => {
                 <Cart isOpen={isOpen} toggleCart={toggleCart} cartItems={cartItems} setCartItems={setCartItems} />
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 m-5">
-                {data.products.slice(0, 12).map((product) => (
+                {data.products.slice(0, 16).map((product) => (
                     <Product
                         key={product.id}
                         product={product}
