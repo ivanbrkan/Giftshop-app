@@ -36,7 +36,7 @@ const Checkout = ({ cartItems, setCartItems }) => {
             alert("Order placed successfully!");
             localStorage.removeItem("cartItems");
             setCartItems([]);
-            navigate("/order-history");
+            navigate("/profile");
         } catch (error) {
             console.error("Error creating order:", error);
         }

@@ -39,8 +39,6 @@ export function Login({ setAuth }) {
         event.preventDefault();
         const { regEmail, regPassword, regUsername } = event.target.elements;
 
-        console.log("Registration values:", regEmail.value, regPassword.value, regUsername.value);
-
         try {
             await createUserWithEmailAndPassword(auth, regEmail.value, regPassword.value, regUsername.value);
             await updateProfile(auth.currentUser, { displayName: regUsername.value });
